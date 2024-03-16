@@ -29,7 +29,7 @@
 ```
 
 
-### create_tables - Создание таблиц
+## create_tables - Создание таблиц
 
 ```python
     async def create_tables(self):        
