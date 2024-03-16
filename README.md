@@ -15,7 +15,7 @@
 
 ---
 
-**Documentation**: <a href="https://github.com/reques6e/Cryptocurrency-Wallet/blob/main/README.md" target="_blank">https://docs.r6e.ru</a>
+**Documentation**: <a href="https://github.com/reques6e/Cryptocurrency-Wallet/blob/main/README.md" target="_blank">httрs://docs.r6e.ru</a>
 
 **Source Code**: <a href="https://github.com/reques6e/Cryptocurrency-Wallet" target="_blank">https://github.com/reques6e/Cryptocurrency-Wallet</a>
 
