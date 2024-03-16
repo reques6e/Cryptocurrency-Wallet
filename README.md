@@ -141,6 +141,8 @@ DataBase:
 ```
 
 
+<details markdown="1">
+<summary>Код функции create_tables</summary>
 
 ```python
     async def create_tables(self):        
@@ -182,3 +184,5 @@ DataBase:
         else:
             await logger('info', 'Таблицы в базе данных были созданы')
 ```
+
+</details>
