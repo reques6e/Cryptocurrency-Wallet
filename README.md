@@ -146,9 +146,9 @@ INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 ```
 
 <details markdown="1">
-<summary>Or use <code>async def</code>...</summary>
+<summary>Дополнительно <code>Key</code>...</summary>
 
-Уникальный ключ (без шифра):
+Уникальный ключ (без шифра) (дефолтный):
 
 ```
 HelloWorld^&@#$*^*#@&$@!#
@@ -159,7 +159,7 @@ rEques&eP1jec%TF;
 $sevenNineS86*&#^#@$)@!($&*@*(!#$&@#^%*$&*&#@$^#65&*(#%^@!*(#&*&@#%)@!(#asashbDH))
 ```
 
-С шифром m256:
+С шифром m256 (дефолтный):
 
 ```python
     unic = (
