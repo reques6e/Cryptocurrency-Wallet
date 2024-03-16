@@ -47,17 +47,6 @@ INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 
 </div>
 
-<details markdown="1">
-<summary>Дополнения к запуску <code>python3 main.py</code><summary>
-
-Команда `python3 main.p` так же имеет дополнительные параметры к запуску скрипта:
-
-* `example`: Пример ...
-* ...
-* ...
-
-</details>
-
 ### Проверка скрипта
 
 Откройте браузер и введите URL: <a href="http://127.0.0.1:8000" class="external-link" target="_blank">http://127.0.0.1:{your_port}</a>.
@@ -65,7 +54,7 @@ INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 
 ### Функции в базе данных и как они работают
 
-<details markdown="1">
+<details markdown="0">
 <summary>Как этим пользовать? Разработчик идио...</summary>
 
 * `[API]`: Функция используется напрямую в API системе 
