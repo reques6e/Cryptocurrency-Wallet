@@ -54,7 +54,7 @@ INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 
 ### Функции в базе данных и как они работают
 
-<details markdown="0">
+<details markdown="1" open>
 <summary>Как этим пользовать? Разработчик идио...</summary>
 
 * `[API]`: Функция используется напрямую в API системе 
