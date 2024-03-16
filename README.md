@@ -144,7 +144,7 @@ DataBase:
 <details markdown="1">
 <summary>Код функции create_tables</summary>
 
-Код из репозитория (актуальный): <a href="[URL](https://github.com/reques6e/Cryptocurrency-Wallet/blob/main/database.py#L26)">database.py</a>
+Код из репозитория (актуальный): <a href="https://github.com/reques6e/Cryptocurrency-Wallet/blob/main/database.py#L26">database.py</a>
 
 ```python
     async def create_tables(self):        
