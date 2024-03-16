@@ -1,3 +1,67 @@
+<p align="center">
+  <a href="https://fastapi.tiangolo.com"><img src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" alt="FastAPI"></a>
+</p>
+<p align="center">
+    <em>FastAPI framework, high performance, easy to learn, fast to code, ready for production</em>
+</p>
+<p align="center">
+<a href="https://github.com/tiangolo/fastapi/actions?query=workflow%3ATest+event%3Apush+branch%3Amaster" target="_blank">
+    <img src="https://github.com/tiangolo/fastapi/workflows/Test/badge.svg?event=push&branch=master" alt="Test">
+</a>
+<a href="https://coverage-badge.samuelcolvin.workers.dev/redirect/tiangolo/fastapi" target="_blank">
+    <img src="https://coverage-badge.samuelcolvin.workers.dev/tiangolo/fastapi.svg" alt="Coverage">
+</a>
+<a href="https://pypi.org/project/fastapi" target="_blank">
+    <img src="https://img.shields.io/pypi/v/fastapi?color=%2334D058&label=pypi%20package" alt="Package version">
+</a>
+<a href="https://pypi.org/project/fastapi" target="_blank">
+    <img src="https://img.shields.io/pypi/pyversions/fastapi.svg?color=%2334D058" alt="Supported Python versions">
+</a>
+</p>
+
+---
+
+**Documentation**: <a href="https://fastapi.tiangolo.com" target="_blank">https://fastapi.tiangolo.com</a>
+
+**Source Code**: <a href="https://github.com/tiangolo/fastapi" target="_blank">https://github.com/tiangolo/fastapi</a>
+
+---
+
+Скрипт банковской системы.
+
+
+### Запуск
+
+<div class="block_code">
+
+```console
+Libary: https://github.com/tiangolo/fastapi
+
+$ python3 main.py
+
+INFO:     Started server process [x]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+```
+
+</div>
+
+<details markdown="1">
+<summary>Дополнения к запуску <code>python3 main.py</code><summary>
+
+Команда `python3 main.p` так же имеет дополнительные параметры к запуску скрипта:
+
+* `example`: Пример ...
+* ...
+* ...
+
+</details>
+
+### Проверка скрипта
+
+Откройте браузер и введите URL: <a href="http://127.0.0.1:8000" class="external-link" target="_blank">http://127.0.0.1:{your_port}</a>.
+
 ```
 ./
 ├── database.py
@@ -80,3 +144,32 @@
         else:
             await logger('info', 'Таблицы в базе данных были созданы')
 ```
+
+<details markdown="1">
+<summary>Or use <code>async def</code>...</summary>
+
+Уникальный ключ (без шифра):
+
+```
+HelloWorld^&@#$*^*#@&$@!#
+Reques6eProject
+IsFreeGithubProject^_^
+$@#&%*$(*&ASKDJHBckjkasd852654sd23543$#Q!@)
+rEques&eP1jec%TF;
+$sevenNineS86*&#^#@$)@!($&*@*(!#$&@#^%*$&*&#@$^#65&*(#%^@!*(#&*&@#%)@!(#asashbDH))
+```
+
+С шифром m256:
+
+```python
+    unic = (
+        'ef681700750ea986789b267d7789789190c32eeda4a855eeafad0f6de211b889',
+        '08b612420238588d09c4eddaa6fba316ce438eb69fc89aa2f58b16d1bf4cef6b',
+        '8714eebb95b72f21ae7cbbbfba30cccaade480592dbcb2626da39ad093871bd9',
+        '3fba659cfe0bbfe38ea1047a5f4268393d36fee426b4ff863422db5b81788d6f',
+        '96bafa906fff030fb9482b46a07638ab2c495e47deaa259e08cbb96c9f5d640d',
+        '4d0004a2f0f20fde43fb12e029d893787523fa61ed349534aea272b427cc242d'
+    )
+```
+
+</details>
