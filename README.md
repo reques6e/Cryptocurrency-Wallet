@@ -71,37 +71,35 @@ INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 * `[API]`: Функция используется напрямую в API системе 
 * `[HAPI]`: Вспомогательная функция используется при обработке запроса (бекенд) в API
 * `[EDIT]`: Функция которая редактирует параметры ранее записанные в базе данных
+* `[ADD]`: Добавление дополнительных параметров, так же могут использоваться как параметр EDIT
+* `[SYS]`: Функция, которая используется внутри других функций (Изменение аннотации и ответа функции могут вызывать ошибки в работе скрипта)
 * `->`: Формат результата, который возвращается после вызова функции (аннотация функции Python)
 </details>
 
 ```
-./
 ├── database.py
-│   ├── create_tables                             -> None
-│   ├── create_user_account               [API]   -> bool
-│   ├── user_exists                               -> bool
-│   ├── is_active                         [EDIT]  -> bool
-│   ├── is_verified                               -> bool
-│   ├── is_ban                                    -> bool
-│   ├── is_banker                                 -> bool
-│   ├── gender                                    -> bool
-│   ├── add_email                                 -> bool
-│   ├── add_phone                         [HAPI]  -> bool
-│   ├── create_invoice                    [API]   -> dict
-│   ├── invoice_info                      [API]   -> dict
-│   ├── get_user_id_by_api_key            [HAPI]  -> Optional[int]
-│   ├── get_user_info                     [API]   -> Optional[dict]
-│   ├── get_user_info_api_key                     -> Optional[dict]
-│   ├── delete_user                       [API]   -> bool
-│   ├── get_user_by_id_and_password       [HAPI]  -> Optional[Union[str, Tuple]]
-│   ├── get_user_balance                          -> float
-│   ├── award_cash                                -> bool
-│   ├── unaward_cash                              -> bool
-│   ├── transfer_cash                     [API]   -> dict[str, Union[str, int, bool]]
-│   ├── conclusion_cash                   [API]   -> dict[str, Union[str, int, bool]]
-│   ├── 
-│   ├── 
-
+│   ├── create_tables                                             -> None
+│   ├── create_user_account               [API]                   -> bool
+│   ├── user_exists                       <span style="color:red">[SYS]</span>                   -> bool
+│   ├── is_active                         [EDIT]                  -> bool
+│   ├── is_verified                       [EDIT]                  -> bool
+│   ├── is_ban                            [EDIT]                  -> bool
+│   ├── is_banker                         [EDIT]                  -> bool
+│   ├── gender                            [EDIT]                  -> bool
+│   ├── add_email                         [ADD]                   -> bool
+│   ├── add_phone                         [ADD]                   -> bool
+│   ├── create_invoice                    [API]                   -> dict
+│   ├── invoice_info                      [API]                   -> dict
+│   ├── get_user_id_by_api_key            [HAPI]                  -> Optional[int]
+│   ├── get_user_info                     [API]                   -> Optional[dict]
+│   ├── get_user_info_api_key                                     -> Optional[dict]
+│   ├── delete_user                       [API]                   -> bool
+│   ├── get_user_by_id_and_password       [HAPI]                  -> Optional[Union[str, Tuple]]
+│   ├── get_user_balance                                          -> float
+│   ├── award_cash                                                -> bool
+│   ├── unaward_cash                                              -> bool
+│   ├── transfer_cash                     [API]                   -> dict[str, Union[str, int, bool]]
+│   ├── conclusion_cash                   [API]                   -> dict[str, Union[str, int, bool]]
 ```
 
 
