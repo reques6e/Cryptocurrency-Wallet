@@ -72,15 +72,16 @@ INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 * `[HAPI]`: Вспомогательная функция используется при обработке запроса (бекенд) в API
 * `[EDIT]`: Функция которая редактирует параметры ранее записанные в базе данных
 * `[ADD]`: Добавление дополнительных параметров, так же могут использоваться как параметр EDIT
-* `[SYS]`: Функция, которая используется внутри других функций (Изменение аннотации и ответа функции могут вызывать ошибки в работе скрипта)
+* `[SYS]`: <span style="color:red">Функция, которая используется внутри других функций (Изменение аннотации и ответа функции могут вызывать ошибки в работе скрипта)</span>
 * `->`: Формат результата, который возвращается после вызова функции (аннотация функции Python)
 </details>
 
 ```
+./
 ├── database.py
 │   ├── create_tables                                             -> None
 │   ├── create_user_account               [API]                   -> bool
-│   ├── user_exists                       <span style="color:red">[SYS]</span>                   -> bool
+│   ├── user_exists                       [SYS]                   -> bool
 │   ├── is_active                         [EDIT]                  -> bool
 │   ├── is_verified                       [EDIT]                  -> bool
 │   ├── is_ban                            [EDIT]                  -> bool
@@ -100,6 +101,9 @@ INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 │   ├── unaward_cash                                              -> bool
 │   ├── transfer_cash                     [API]                   -> dict[str, Union[str, int, bool]]
 │   ├── conclusion_cash                   [API]                   -> dict[str, Union[str, int, bool]]
+│   ├── 
+│   ├── 
+
 ```
 
 
