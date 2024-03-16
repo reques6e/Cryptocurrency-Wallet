@@ -72,7 +72,7 @@ INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 * `[HAPI]`: Вспомогательная функция используется при обработке запроса (бекенд) в API
 * `[EDIT]`: Функция которая редактирует параметры ранее записанные в базе данных
 * `[ADD]`: Добавление дополнительных параметров, так же могут использоваться как параметр EDIT
-* `[SYS]`: <span style="color:red">Функция, которая используется внутри других функций (Изменение аннотации и ответа функции могут вызывать ошибки в работе скрипта)</span>
+* `[SYS]`: Функция, которая используется внутри других функций (Изменение аннотации и ответа функции могут вызывать ошибки в работе скрипта)
 * `->`: Формат результата, который возвращается после вызова функции (аннотация функции Python)
 </details>
 
@@ -81,7 +81,7 @@ INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 ├── database.py
 │   ├── create_tables                                             -> None
 │   ├── create_user_account               [API]                   -> bool
-│   ├── user_exists                       [SYS]                   -> bool
+│   ├── user_exists                                               -> bool
 │   ├── is_active                         [EDIT]                  -> bool
 │   ├── is_verified                       [EDIT]                  -> bool
 │   ├── is_ban                            [EDIT]                  -> bool
@@ -109,6 +109,39 @@ INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 
 ## create_tables - Создание таблиц
 
+Структура 
+
+```
+DataBase:
+    users:
+        user_id INTEGER PRIMARY KEY
+        is_active INTEGER
+        is_verified INTEGER
+        is_ban INTEGER
+        is_banker INTEGER
+        gender TEXT
+        email TEXT
+        phone INT
+        password TEXT
+        api_key TEXT
+        address TEXT
+        cash REAL
+    
+    invoices:
+        uuid TEXT PRIMARY KEY
+        hash TEXT
+        user_id INTEGER
+        url TEXT
+        amount REAL
+        status TEXT
+        commission REAL
+        currency TEXT
+        callback_url TEXT
+        created_at INTEGER
+```
+
+
+
 ```python
     async def create_tables(self):        
         await self.cursor.execute('''
@@ -127,15 +160,6 @@ INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
                 cash REAL
             )
         ''')
-
-        # await self.cursor.execute('''
-        #     CREATE TABLE IF NOT EXISTS bank_accounts (
-        #         user_id INTEGER PRIMARY KEY,
-        #         is_active INTEGER,
-        #         is_ban INTEGER,
-        #         cash REAL
-        #     )
-        # ''')
 
         await self.cursor.execute('''
             CREATE TABLE IF NOT EXISTS invoices (
